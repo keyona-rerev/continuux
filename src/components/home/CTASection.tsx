@@ -7,6 +7,12 @@ export function CTASection() {
     <section className="relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 hero-gradient" />
+      
+      {/* Animated background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-accent/10 rounded-full blur-2xl animate-float-delayed" />
+      </div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
 
       <div className="container-wide relative z-10 py-16 lg:py-24">
@@ -16,19 +22,19 @@ export function CTASection() {
             Start protecting your legacy today
           </div>
 
-          <h2 className="font-serif text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
             Your family's future shouldn't be left to chance
           </h2>
 
           <p className="mt-6 text-lg text-white/80 max-w-2xl mx-auto">
-            Join thousands of families who trust Continuux to keep their most important 
+            Join thousands of families who trust Prismm to keep their most important 
             documents safe, organized, and accessible when it matters most.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-white text-primary hover:bg-white/90 text-base px-8"
+              className="bg-accent text-foreground hover:bg-accent/90 text-base px-8 font-semibold shadow-lg"
               asChild
             >
               <Link to="/pricing">
@@ -39,7 +45,7 @@ export function CTASection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 text-base"
+              className="border-white/40 bg-white/10 text-white hover:bg-white/20 text-base font-medium backdrop-blur-sm"
               asChild
             >
               <Link to="/how-it-works">Learn More</Link>

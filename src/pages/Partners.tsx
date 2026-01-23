@@ -1,4 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
+import { PageHero } from "@/components/ui/page-hero";
+import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,22 +11,21 @@ const benefits = [
   { icon: Users, title: "Client Management", description: "Help clients organize their documents and access their vaults when needed." },
   { icon: BarChart3, title: "Dashboard Analytics", description: "Track client engagement and document completeness at a glance." },
   { icon: Shield, title: "Secure Collaboration", description: "Share documents securely with proper access controls and audit trails." },
-  { icon: Handshake, title: "Referral Program", description: "Earn commissions for every client you bring to Continuux." },
+  { icon: Handshake, title: "Referral Program", description: "Earn commissions for every client you bring to Prismm." },
 ];
 
 const Partners = () => {
   return (
     <Layout>
-      <section className="pt-32 pb-16 hero-gradient">
-        <div className="container-wide text-center text-white">
-          <h1 className="font-serif text-4xl font-bold sm:text-5xl lg:text-6xl">Partner with Continuux</h1>
-          <p className="mt-6 text-lg text-white/80 max-w-2xl mx-auto">Help your clients protect their legacy while growing your practice</p>
-        </div>
-      </section>
+      <PageHero 
+        title="Partner with Prismm"
+        subtitle="Help your clients protect their legacy while growing your practice"
+        animation="aurora"
+      />
 
-      <section className="section-padding bg-background">
+      <SectionWrapper background="default" animation="dot-pulse">
         <div className="container-wide">
-          <SectionHeader badge="For Advisors" title="Why partner with us?" description="Continuux gives financial advisors, attorneys, and estate planners powerful tools to serve their clients better." />
+          <SectionHeader badge="For Advisors" title="Why partner with us?" description="Prismm gives financial advisors, attorneys, and estate planners powerful tools to serve their clients better." />
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((b) => (
               <div key={b.title} className="p-6 rounded-xl bg-card border border-border">
@@ -35,9 +36,9 @@ const Partners = () => {
             ))}
           </div>
         </div>
-      </section>
+      </SectionWrapper>
 
-      <section className="section-padding bg-muted/50">
+      <SectionWrapper background="muted" animation="radial-glow">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -58,9 +59,9 @@ const Partners = () => {
             </div>
           </div>
         </div>
-      </section>
+      </SectionWrapper>
 
-      <section className="section-padding bg-background">
+      <SectionWrapper background="default" animation="gradient-sweep">
         <div className="container-wide max-w-2xl">
           <SectionHeader badge="Get Started" title="Become a Partner" description="Fill out the form below and our partnerships team will be in touch within 48 hours." />
           <form className="mt-12 space-y-6 p-8 rounded-2xl bg-card border border-border">
@@ -71,11 +72,11 @@ const Partners = () => {
             <Input placeholder="Company / Firm Name" />
             <Input type="email" placeholder="Work Email" />
             <Input placeholder="Phone Number" />
-            <Textarea placeholder="Tell us about your practice and how you'd like to use Continuux" rows={4} />
+            <Textarea placeholder="Tell us about your practice and how you'd like to use Prismm" rows={4} />
             <Button type="submit" size="lg" className="w-full">Submit Application <ArrowRight className="ml-2 h-5 w-5" /></Button>
           </form>
         </div>
-      </section>
+      </SectionWrapper>
     </Layout>
   );
 };

@@ -8,11 +8,15 @@ export function HeroSection() {
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 hero-gradient" />
-      <div className="absolute inset-0 bg-[url('/placeholder.svg')] opacity-5 bg-cover bg-center" />
       
-      {/* Decorative elements */}
-      <div className="absolute top-1/4 right-10 w-72 h-72 bg-white/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+      {/* Animated floating orbs */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-accent/10 rounded-full blur-2xl animate-float-delayed" />
+        <div className="absolute top-1/2 right-1/3 w-32 h-32 bg-secondary/10 rounded-full blur-xl animate-float" />
+        <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute bottom-1/3 left-10 w-96 h-96 bg-secondary/5 rounded-full blur-3xl animate-float-delayed" />
+      </div>
 
       <div className="container-wide relative z-10 pt-24 pb-16 lg:pt-32 lg:pb-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -46,13 +50,13 @@ export function HeroSection() {
 
             {/* CTAs */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-accent text-foreground hover:bg-accent/90 text-base px-8 font-semibold" asChild>
+              <Button size="lg" className="bg-accent text-foreground hover:bg-accent/90 text-base px-8 font-semibold shadow-lg" asChild>
                 <Link to="/pricing">
                   Start Your Vault
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 text-base font-medium" asChild>
+              <Button size="lg" variant="outline" className="border-white/40 bg-white/10 text-white hover:bg-white/20 text-base font-medium backdrop-blur-sm" asChild>
                 <Link to="/how-it-works">See How It Works</Link>
               </Button>
             </div>

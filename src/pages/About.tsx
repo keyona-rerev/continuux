@@ -1,4 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
+import { PageHero } from "@/components/ui/page-hero";
+import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Shield, Heart, Lock, Users, Eye, Sparkles } from "lucide-react";
 
@@ -19,7 +21,7 @@ const values = [
 ];
 
 const timeline = [
-  { year: "2021", event: "Continuux founded with a mission to democratize estate planning" },
+  { year: "2021", event: "Prismm founded with a mission to democratize estate planning" },
   { year: "2022", event: "Launched beta with 1,000 founding families" },
   { year: "2023", event: "Reached 10,000 families, achieved SOC 2 certification" },
   { year: "2024", event: "Expanded partnerships with financial advisors nationwide" },
@@ -28,27 +30,26 @@ const timeline = [
 const About = () => {
   return (
     <Layout>
-      <section className="pt-32 pb-16 hero-gradient">
-        <div className="container-wide text-center text-white">
-          <h1 className="font-serif text-4xl font-bold sm:text-5xl lg:text-6xl">About Continuux</h1>
-          <p className="mt-6 text-lg text-white/80 max-w-2xl mx-auto">On a mission to help every family secure their digital legacy</p>
-        </div>
-      </section>
+      <PageHero 
+        title="About Prismm"
+        subtitle="On a mission to help every family secure their digital legacy"
+        animation="aurora"
+      />
 
-      <section className="section-padding bg-background">
+      <SectionWrapper background="default" animation="radial-glow">
         <div className="container-wide">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-3xl font-bold text-foreground">Our Mission</h2>
+            <h2 className="text-3xl font-bold text-foreground">Our Mission</h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
               We believe that protecting your family's future shouldn't require expensive lawyers or complicated software. 
-              Continuux was born from a simple idea: everyone deserves a secure, organized place for their most important documents—
+              Prismm was born from a simple idea: everyone deserves a secure, organized place for their most important documents—
               and a clear plan for what happens to them.
             </p>
           </div>
         </div>
-      </section>
+      </SectionWrapper>
 
-      <section className="section-padding bg-muted/50">
+      <SectionWrapper background="muted" animation="dot-pulse">
         <div className="container-wide">
           <SectionHeader badge="Our Values" title="What we stand for" />
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -61,9 +62,9 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </SectionWrapper>
 
-      <section className="section-padding bg-background">
+      <SectionWrapper background="default" animation="gradient-sweep">
         <div className="container-wide">
           <SectionHeader badge="Leadership" title="Meet the team" />
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -77,9 +78,9 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </SectionWrapper>
 
-      <section className="section-padding bg-muted/50">
+      <SectionWrapper background="muted" animation="diagonal-lines">
         <div className="container-wide max-w-3xl">
           <SectionHeader badge="Our Journey" title="Company timeline" />
           <div className="mt-12 space-y-6">
@@ -91,11 +92,15 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </SectionWrapper>
 
-      <section id="careers" className="section-padding hero-gradient">
-        <div className="container-wide text-center text-white">
-          <h2 className="font-serif text-3xl font-bold">Join Our Team</h2>
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 hero-gradient" />
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-gradient-shift" />
+        </div>
+        <div id="careers" className="container-wide relative z-10 text-center text-white">
+          <h2 className="text-3xl font-bold">Join Our Team</h2>
           <p className="mt-4 text-white/80 max-w-xl mx-auto">We're always looking for talented people who share our mission. Check back soon for open positions.</p>
         </div>
       </section>

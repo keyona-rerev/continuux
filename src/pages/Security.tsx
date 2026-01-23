@@ -1,4 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
+import { PageHero } from "@/components/ui/page-hero";
+import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Shield, Lock, Server, Eye, FileCheck, CheckCircle } from "lucide-react";
 
@@ -14,14 +16,13 @@ const securityFeatures = [
 const Security = () => {
   return (
     <Layout>
-      <section className="pt-32 pb-16 hero-gradient">
-        <div className="container-wide text-center text-white">
-          <h1 className="font-serif text-4xl font-bold sm:text-5xl lg:text-6xl">Security & Trust</h1>
-          <p className="mt-6 text-lg text-white/80 max-w-2xl mx-auto">Your security is our foundation. Here's how we protect your most sensitive information.</p>
-        </div>
-      </section>
+      <PageHero 
+        title="Security & Trust"
+        subtitle="Your security is our foundation. Here's how we protect your most sensitive information."
+        animation="wave-pulse"
+      />
 
-      <section className="section-padding bg-background">
+      <SectionWrapper background="default" animation="gradient-sweep">
         <div className="container-wide">
           <SectionHeader badge="Protection" title="How we keep your data safe" />
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -34,9 +35,9 @@ const Security = () => {
             ))}
           </div>
         </div>
-      </section>
+      </SectionWrapper>
 
-      <section className="section-padding bg-muted/50">
+      <SectionWrapper background="muted" animation="radial-glow">
         <div className="container-wide max-w-3xl">
           <SectionHeader title="Your Data, Your Control" description="We believe privacy is a fundamental right. Here's our commitment to you." />
           <div className="mt-12 space-y-6">
@@ -54,7 +55,7 @@ const Security = () => {
             </div>
           </div>
         </div>
-      </section>
+      </SectionWrapper>
     </Layout>
   );
 };

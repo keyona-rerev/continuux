@@ -1,9 +1,11 @@
 import { Layout } from "@/components/layout/Layout";
+import { PageHero } from "@/components/ui/page-hero";
+import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Link } from "react-router-dom";
-import { Check, ArrowRight, Shield, Gift, HelpCircle } from "lucide-react";
+import { Check, ArrowRight, Gift, HelpCircle } from "lucide-react";
 import { useState } from "react";
 
 const features = [
@@ -23,14 +25,13 @@ const Pricing = () => {
 
   return (
     <Layout>
-      <section className="pt-32 pb-16 hero-gradient">
-        <div className="container-wide text-center text-white">
-          <h1 className="font-serif text-4xl font-bold sm:text-5xl lg:text-6xl">Simple, Transparent Pricing</h1>
-          <p className="mt-6 text-lg text-white/80 max-w-2xl mx-auto">One plan with everything you need. No hidden fees, no surprises.</p>
-        </div>
-      </section>
+      <PageHero 
+        title="Simple, Transparent Pricing"
+        subtitle="One plan with everything you need. No hidden fees, no surprises."
+        animation="floating-orbs"
+      />
 
-      <section className="section-padding bg-background -mt-16">
+      <SectionWrapper background="default" animation="gradient-sweep" className="-mt-16">
         <div className="container-wide">
           <div className="max-w-2xl mx-auto">
             <div className="relative rounded-3xl bg-card border-2 border-primary shadow-elevated p-8 lg:p-10">
@@ -55,7 +56,7 @@ const Pricing = () => {
               <div className="flex items-start gap-4">
                 <Gift className="h-8 w-8 text-accent shrink-0" />
                 <div className="flex-1">
-                  <h3 className="font-serif text-xl font-semibold text-foreground">Apply for a Free Account</h3>
+                  <h3 className="text-xl font-semibold text-foreground">Apply for a Free Account</h3>
                   <p className="text-muted-foreground mt-2">We believe everyone deserves to protect their legacy. If you're facing financial hardship, we offer free accounts on a case-by-case basis.</p>
                   {!showFreeForm ? (
                     <Button variant="outline" className="mt-4" onClick={() => setShowFreeForm(true)}>Apply Now</Button>
@@ -73,11 +74,11 @@ const Pricing = () => {
             </div>
           </div>
         </div>
-      </section>
+      </SectionWrapper>
 
-      <section className="section-padding bg-muted/50">
+      <SectionWrapper background="muted" animation="diagonal-lines">
         <div className="container-wide max-w-3xl">
-          <h2 className="font-serif text-2xl font-bold text-foreground text-center mb-8">Frequently Asked Questions</h2>
+          <h2 className="text-2xl font-bold text-foreground text-center mb-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map((faq) => (
               <div key={faq.q} className="p-6 rounded-xl bg-card border border-border">
@@ -87,7 +88,7 @@ const Pricing = () => {
             ))}
           </div>
         </div>
-      </section>
+      </SectionWrapper>
     </Layout>
   );
 };

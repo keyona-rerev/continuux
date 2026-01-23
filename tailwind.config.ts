@@ -104,6 +104,68 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        "float-slow": {
+          "0%, 100%": { transform: "translateY(0) scale(1)" },
+          "50%": { transform: "translateY(-20px) scale(1.05)" },
+        },
+        "float-delayed": {
+          "0%, 100%": { transform: "translateY(0) translateX(0)" },
+          "50%": { transform: "translateY(-15px) translateX(10px)" },
+        },
+        "gradient-shift": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+        "mesh-drift": {
+          "0%": { transform: "translate(0, 0)" },
+          "100%": { transform: "translate(60px, 60px)" },
+        },
+        "pulse-slow": {
+          "0%, 100%": { opacity: "0.3" },
+          "50%": { opacity: "0.6" },
+        },
+        "wave-1": {
+          "0%, 100%": { transform: "translateY(0) scaleY(1)" },
+          "50%": { transform: "translateY(-5px) scaleY(1.1)" },
+        },
+        "wave-2": {
+          "0%, 100%": { transform: "translateY(0) scaleY(1)" },
+          "50%": { transform: "translateY(-8px) scaleY(1.15)" },
+        },
+        "wave-3": {
+          "0%, 100%": { transform: "translateY(0) scaleY(1)" },
+          "50%": { transform: "translateY(-3px) scaleY(1.05)" },
+        },
+        "aurora-1": {
+          "0%": { transform: "rotate(0deg) scale(1)" },
+          "50%": { transform: "rotate(180deg) scale(1.2)" },
+          "100%": { transform: "rotate(360deg) scale(1)" },
+        },
+        "aurora-2": {
+          "0%": { transform: "rotate(360deg) scale(1.1)" },
+          "50%": { transform: "rotate(180deg) scale(0.9)" },
+          "100%": { transform: "rotate(0deg) scale(1.1)" },
+        },
+        "sweep": {
+          "0%": { transform: "translate(-50%, -50%) rotate(0deg)" },
+          "100%": { transform: "translate(-50%, -50%) rotate(360deg)" },
+        },
+        "dot-pulse": {
+          "0%, 100%": { opacity: "0.2" },
+          "50%": { opacity: "0.4" },
+        },
+        "radial-pulse": {
+          "0%, 100%": { opacity: "0.3", transform: "translate(-50%, -50%) scale(1)" },
+          "50%": { opacity: "0.6", transform: "translate(-50%, -50%) scale(1.1)" },
+        },
+        "grain": {
+          "0%, 100%": { transform: "translate(0, 0)" },
+          "10%": { transform: "translate(-5%, -10%)" },
+          "30%": { transform: "translate(3%, -15%)" },
+          "50%": { transform: "translate(12%, 9%)" },
+          "70%": { transform: "translate(9%, 4%)" },
+          "90%": { transform: "translate(-1%, 7%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -113,6 +175,20 @@ export default {
         "slide-down": "slide-down 0.3s ease-out forwards",
         "scale-in": "scale-in 0.3s ease-out forwards",
         "float": "float 3s ease-in-out infinite",
+        "float-slow": "float-slow 6s ease-in-out infinite",
+        "float-delayed": "float-delayed 5s ease-in-out infinite 1s",
+        "gradient-shift": "gradient-shift 3s ease-in-out infinite",
+        "mesh-drift": "mesh-drift 20s linear infinite",
+        "pulse-slow": "pulse-slow 4s ease-in-out infinite",
+        "wave-1": "wave-1 4s ease-in-out infinite",
+        "wave-2": "wave-2 5s ease-in-out infinite 0.5s",
+        "wave-3": "wave-3 3s ease-in-out infinite 1s",
+        "aurora-1": "aurora-1 20s linear infinite",
+        "aurora-2": "aurora-2 25s linear infinite",
+        "sweep": "sweep 30s linear infinite",
+        "dot-pulse": "dot-pulse 3s ease-in-out infinite",
+        "radial-pulse": "radial-pulse 6s ease-in-out infinite",
+        "grain": "grain 8s steps(10) infinite",
       },
       boxShadow: {
         "soft": "0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)",
