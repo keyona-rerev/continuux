@@ -2,40 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Continuux Design System
-   Digital Legacy Vault - Trust, Security, Peace of Mind
+/* Prismm Design System
+   Digital Vault Technology & Security Solutions
+   Brand Colors: Orange #F5C070, Coral #F9655B, Purple #6658EA, Navy #1F2937
    All colors in HSL format
 */
 
 @layer base {
   :root {
     /* Background & Foreground */
-    --background: 210 33% 98%;
-    --foreground: 222 47% 11%;
+    --background: 210 20% 98%;
+    --foreground: 215 28% 17%;
 
     /* Card */
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 215 28% 17%;
 
     /* Popover */
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 215 28% 17%;
 
-    /* Primary - Trustworthy Blue */
-    --primary: 217 91% 60%;
+    /* Primary - Prismm Purple */
+    --primary: 245 78% 63%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Calming Green for Security */
-    --secondary: 160 84% 39%;
+    /* Secondary - Prismm Coral/Red */
+    --secondary: 7 93% 66%;
     --secondary-foreground: 0 0% 100%;
 
     /* Muted */
-    --muted: 210 40% 96%;
+    --muted: 210 20% 96%;
     --muted-foreground: 215 16% 47%;
 
-    /* Accent - Warm Gold for Highlights */
-    --accent: 38 92% 50%;
-    --accent-foreground: 222 47% 11%;
+    /* Accent - Prismm Orange/Gold */
+    --accent: 38 88% 70%;
+    --accent-foreground: 215 28% 17%;
 
     /* Destructive */
     --destructive: 0 84% 60%;
@@ -44,85 +45,93 @@
     /* Border & Input */
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 217 91% 60%;
+    --ring: 245 78% 63%;
 
     /* Radius */
     --radius: 0.75rem;
 
     /* Sidebar */
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5% 26%;
-    --sidebar-primary: 217 91% 60%;
+    --sidebar-foreground: 215 28% 17%;
+    --sidebar-primary: 245 78% 63%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 40% 96%;
-    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-accent: 210 20% 96%;
+    --sidebar-accent-foreground: 215 28% 17%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-ring: 245 78% 63%;
 
-    /* Custom Continuux Variables */
-    --hero-gradient-start: 217 91% 60%;
-    --hero-gradient-end: 222 47% 20%;
+    /* Custom Prismm Variables */
+    --hero-gradient-start: 245 78% 63%;
+    --hero-gradient-end: 215 28% 17%;
+    --prismm-orange: 38 88% 70%;
+    --prismm-coral: 7 93% 66%;
+    --prismm-purple: 245 78% 63%;
+    --prismm-navy: 215 28% 17%;
     --success: 160 84% 39%;
     --success-foreground: 0 0% 100%;
-    --warning: 38 92% 50%;
-    --warning-foreground: 222 47% 11%;
+    --warning: 38 88% 70%;
+    --warning-foreground: 215 28% 17%;
   }
 
   .dark {
     /* Background & Foreground */
-    --background: 222 47% 6%;
-    --foreground: 210 40% 98%;
+    --background: 215 28% 9%;
+    --foreground: 210 20% 98%;
 
     /* Card */
-    --card: 222 47% 9%;
-    --card-foreground: 210 40% 98%;
+    --card: 215 28% 12%;
+    --card-foreground: 210 20% 98%;
 
     /* Popover */
-    --popover: 222 47% 9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 215 28% 12%;
+    --popover-foreground: 210 20% 98%;
 
-    /* Primary - Trustworthy Blue */
-    --primary: 217 91% 60%;
+    /* Primary - Prismm Purple */
+    --primary: 245 78% 63%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Calming Green */
-    --secondary: 160 84% 39%;
+    /* Secondary - Prismm Coral/Red */
+    --secondary: 7 93% 66%;
     --secondary-foreground: 0 0% 100%;
 
     /* Muted */
-    --muted: 217 33% 17%;
+    --muted: 215 28% 17%;
     --muted-foreground: 215 20% 65%;
 
-    /* Accent - Warm Gold */
-    --accent: 38 92% 50%;
-    --accent-foreground: 222 47% 11%;
+    /* Accent - Prismm Orange/Gold */
+    --accent: 38 88% 70%;
+    --accent-foreground: 215 28% 17%;
 
     /* Destructive */
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 210 20% 98%;
 
     /* Border & Input */
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 217 91% 60%;
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 245 78% 63%;
 
     /* Sidebar */
-    --sidebar-background: 222 47% 6%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 217 91% 60%;
+    --sidebar-background: 215 28% 9%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 245 78% 63%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 217 33% 17%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 33% 17%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-accent: 215 28% 17%;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-border: 215 28% 17%;
+    --sidebar-ring: 245 78% 63%;
 
-    /* Custom Continuux Variables */
-    --hero-gradient-start: 217 91% 50%;
-    --hero-gradient-end: 222 47% 15%;
+    /* Custom Prismm Variables */
+    --hero-gradient-start: 245 78% 55%;
+    --hero-gradient-end: 215 28% 12%;
+    --prismm-orange: 38 88% 70%;
+    --prismm-coral: 7 93% 66%;
+    --prismm-purple: 245 78% 63%;
+    --prismm-navy: 215 28% 17%;
     --success: 160 84% 39%;
     --success-foreground: 0 0% 100%;
-    --warning: 38 92% 50%;
-    --warning-foreground: 222 47% 11%;
+    --warning: 38 88% 70%;
+    --warning-foreground: 215 28% 17%;
   }
 }
 
