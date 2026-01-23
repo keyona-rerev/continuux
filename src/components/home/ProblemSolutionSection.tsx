@@ -40,7 +40,7 @@ export function ProblemSolutionSection() {
             <div className="inline-flex items-center rounded-full bg-destructive/10 px-4 py-1.5 text-sm font-medium text-destructive mb-6">
               The Problem
             </div>
-            <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
               Your digital life is a mess waiting to happen
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
@@ -77,7 +77,7 @@ export function ProblemSolutionSection() {
               <div className="inline-flex items-center rounded-full bg-secondary/10 px-4 py-1.5 text-sm font-medium text-secondary mb-6">
                 The Solution
               </div>
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
                 Continuux brings order to chaos
               </h2>
               <p className="text-lg text-muted-foreground mb-8">

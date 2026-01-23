@@ -73,7 +73,6 @@ export default {
       },
       fontFamily: {
         sans: ["Nimbus Sans", "Inter", "system-ui", "sans-serif"],
-        serif: ["Playfair Display", "Georgia", "serif"],
       },
       keyframes: {
         "accordion-down": {
