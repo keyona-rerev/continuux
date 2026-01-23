@@ -34,9 +34,9 @@ export function HeroSection() {
               />
             </div>
 
-            <h1 className="font-serif text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
               Secure Your
-              <span className="block text-secondary">Digital Legacy</span>
+              <span className="block text-accent">Digital Legacy</span>
             </h1>
             
             <p className="mt-6 text-lg text-white/80 max-w-xl mx-auto lg:mx-0 lg:text-xl">
@@ -46,13 +46,13 @@ export function HeroSection() {
 
             {/* CTAs */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-base px-8" asChild>
+              <Button size="lg" className="bg-accent text-foreground hover:bg-accent/90 text-base px-8 font-semibold" asChild>
                 <Link to="/pricing">
                   Start Your Vault
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 text-base" asChild>
+              <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 text-base font-medium" asChild>
                 <Link to="/how-it-works">See How It Works</Link>
               </Button>
             </div>
