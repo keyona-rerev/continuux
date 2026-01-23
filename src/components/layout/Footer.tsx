@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Shield, Mail, MapPin, Phone, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import continuuxLogo from "@/assets/continuux-logo.png";
 
 const footerLinks = {
   product: [
@@ -76,10 +77,11 @@ export function Footer() {
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-                <Shield className="h-5 w-5 text-primary-foreground" />
-              </div>
-              <span className="text-xl font-bold">Prismm</span>
+              <img 
+                src={continuuxLogo} 
+                alt="Continuux powered by Prismm" 
+                className="h-12 w-auto"
+              />
             </Link>
             <p className="text-background/70 mb-6 max-w-sm">
               Secure your digital legacy. Organize your important documents, 
@@ -88,11 +90,11 @@ export function Footer() {
             <div className="space-y-3 text-sm text-background/70">
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>hello@getprismm.com</span>
+                <span>hello@continuux.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span>1-800-PRISMM</span>
+                <span>1-800-CONTINUUX</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
@@ -174,7 +176,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-background/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="flex items-center gap-6">
             <p className="text-sm text-background/70">
-              © {new Date().getFullYear()} Prismm. All rights reserved.
+              © {new Date().getFullYear()} Continuux. All rights reserved.
             </p>
             <div className="hidden md:flex items-center gap-2">
               <div className="trust-badge !bg-secondary/20 !text-secondary">
@@ -202,11 +204,11 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Prismm tagline */}
+      {/* Continuux tagline */}
       <div className="border-t border-background/10 py-4">
         <div className="container-wide text-center">
           <p className="text-xs text-background/50">
-            <span className="font-medium">Prismm</span> — Secure your digital legacy
+            <span className="font-medium">Continuux</span> powered by Prismm — Secure your digital legacy
           </p>
         </div>
       </div>
