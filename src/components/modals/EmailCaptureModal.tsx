@@ -62,7 +62,7 @@ export function EmailCaptureModal() {
             <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-secondary/10">
               <CheckCircle className="h-8 w-8 text-secondary" />
             </div>
-            <h3 className="font-serif text-2xl font-bold text-foreground mb-2">
+            <h3 className="text-2xl font-bold text-foreground mb-2">
               You're on the list!
             </h3>
             <p className="text-muted-foreground">
@@ -83,7 +83,7 @@ export function EmailCaptureModal() {
             Free Resource
           </div>
           <DialogHeader>
-            <DialogTitle className="font-serif text-2xl font-bold text-primary-foreground">
+            <DialogTitle className="text-2xl font-bold text-primary-foreground">
               Get Your Free Estate Planning Checklist
             </DialogTitle>
           </DialogHeader>

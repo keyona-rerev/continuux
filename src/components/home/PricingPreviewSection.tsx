@@ -34,7 +34,7 @@ export function PricingPreviewSection() {
             </div>
 
             <div className="text-center mb-8">
-              <h3 className="font-serif text-2xl font-bold text-foreground mb-2">
+              <h3 className="text-2xl font-bold text-foreground mb-2">
                 Complete Vault
               </h3>
               <div className="flex items-baseline justify-center gap-2">
