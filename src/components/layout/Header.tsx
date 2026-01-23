@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Shield } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import continuuxLogo from "@/assets/continuux-logo.png";
 
 const navigation = [
   { name: "How It Works", href: "/how-it-works" },
@@ -42,12 +43,11 @@ export function Header() {
         <div className="flex h-16 items-center justify-between lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-              <Shield className="h-5 w-5 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-bold text-foreground">
-              Prismm
-            </span>
+            <img 
+              src={continuuxLogo} 
+              alt="Continuux powered by Prismm" 
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
