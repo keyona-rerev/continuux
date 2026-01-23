@@ -1,4 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
+import { PageHero } from "@/components/ui/page-hero";
+import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { BookOpen, Play, FileText, Calendar, Download, Bell, Clock } from "lucide-react";
@@ -21,14 +23,13 @@ const courses = [
 const Resources = () => {
   return (
     <Layout>
-      <section className="pt-32 pb-16 hero-gradient">
-        <div className="container-wide text-center text-white">
-          <h1 className="font-serif text-4xl font-bold sm:text-5xl lg:text-6xl">Resources</h1>
-          <p className="mt-6 text-lg text-white/80 max-w-2xl mx-auto">Learn everything you need to know about protecting your digital legacy</p>
-        </div>
-      </section>
+      <PageHero 
+        title="Resources"
+        subtitle="Learn everything you need to know about protecting your digital legacy"
+        animation="gradient-shift"
+      />
 
-      <section className="section-padding bg-background">
+      <SectionWrapper background="default" animation="dot-pulse">
         <div className="container-wide">
           <SectionHeader badge="Articles" title="Latest from the Blog" />
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -43,15 +44,15 @@ const Resources = () => {
                     <span className="flex items-center gap-1"><Clock className="h-3 w-3" />{post.time}</span>
                   </div>
                   <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">{post.title}</h3>
-                  <div className="mt-3 inline-flex items-center gap-1 rounded-full bg-accent/20 px-3 py-1 text-xs font-medium text-accent">Coming Soon</div>
+                  <div className="mt-3 inline-flex items-center gap-1 rounded-full bg-accent/20 px-3 py-1 text-xs font-medium text-accent-foreground">Coming Soon</div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </SectionWrapper>
 
-      <section className="section-padding bg-muted/50">
+      <SectionWrapper background="muted" animation="radial-glow">
         <div className="container-wide">
           <SectionHeader badge="Learn" title="Mini-Courses" description="Free educational content to help you plan your legacy" />
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -70,9 +71,9 @@ const Resources = () => {
             ))}
           </div>
         </div>
-      </section>
+      </SectionWrapper>
 
-      <section className="section-padding bg-background">
+      <SectionWrapper background="default" animation="diagonal-lines">
         <div className="container-wide">
           <SectionHeader badge="Tools" title="Free Downloads" />
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -85,9 +86,9 @@ const Resources = () => {
             ))}
           </div>
         </div>
-      </section>
+      </SectionWrapper>
 
-      <section className="section-padding bg-muted/50">
+      <SectionWrapper background="muted" animation="gradient-sweep">
         <div className="container-wide">
           <SectionHeader badge="Events" title="Upcoming Webinars" />
           <div className="mt-12 max-w-2xl mx-auto space-y-4">
@@ -100,7 +101,7 @@ const Resources = () => {
             ))}
           </div>
         </div>
-      </section>
+      </SectionWrapper>
     </Layout>
   );
 };

@@ -1,8 +1,10 @@
 import { Layout } from "@/components/layout/Layout";
+import { PageHero } from "@/components/ui/page-hero";
+import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Upload, FolderOpen, Users, Shield, Bell, ArrowRight, CheckCircle, Smartphone, Building, Scale } from "lucide-react";
+import { Upload, FolderOpen, Users, Shield, Bell, ArrowRight, Smartphone, Building, Scale } from "lucide-react";
 
 const steps = [
   { icon: Upload, title: "Upload Your Documents", description: "Securely upload wills, insurance policies, deeds, and any important files. We support all common formats." },
@@ -22,14 +24,13 @@ const integrations = [
 const HowItWorks = () => {
   return (
     <Layout>
-      <section className="pt-32 pb-16 hero-gradient">
-        <div className="container-wide text-center text-white">
-          <h1 className="font-serif text-4xl font-bold sm:text-5xl lg:text-6xl">How Continuux Works</h1>
-          <p className="mt-6 text-lg text-white/80 max-w-2xl mx-auto">Secure your digital legacy in five simple steps</p>
-        </div>
-      </section>
+      <PageHero 
+        title="How Prismm Works"
+        subtitle="Secure your digital legacy in five simple steps"
+        animation="mesh-grid"
+      />
 
-      <section className="section-padding bg-background">
+      <SectionWrapper background="default" animation="dot-pulse">
         <div className="container-wide">
           <div className="max-w-4xl mx-auto space-y-8">
             {steps.map((step, index) => (
@@ -39,18 +40,18 @@ const HowItWorks = () => {
                   {index < steps.length - 1 && <div className="w-0.5 h-12 bg-border mt-4" />}
                 </div>
                 <div className="flex-1 pt-2">
-                  <h3 className="font-serif text-xl font-semibold text-foreground">{step.title}</h3>
+                  <h3 className="text-xl font-semibold text-foreground">{step.title}</h3>
                   <p className="mt-2 text-muted-foreground">{step.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </SectionWrapper>
 
-      <section className="section-padding bg-muted/50">
+      <SectionWrapper background="muted" animation="radial-glow">
         <div className="container-wide">
-          <SectionHeader badge="Integrations" title="Works with your existing ecosystem" description="Continuux integrates seamlessly with the services you already use" />
+          <SectionHeader badge="Integrations" title="Works with your existing ecosystem" description="Prismm integrates seamlessly with the services you already use" />
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {integrations.map((item) => (
               <div key={item.name} className="flex flex-col items-center p-6 rounded-xl bg-card border border-border text-center">
@@ -60,13 +61,18 @@ const HowItWorks = () => {
             ))}
           </div>
         </div>
-      </section>
+      </SectionWrapper>
 
-      <section className="section-padding hero-gradient">
-        <div className="container-wide text-center">
-          <h2 className="font-serif text-3xl font-bold text-white sm:text-4xl">Ready to secure your legacy?</h2>
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 hero-gradient" />
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-float-slow" />
+          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-accent/10 rounded-full blur-2xl animate-float-delayed" />
+        </div>
+        <div className="container-wide relative z-10 text-center">
+          <h2 className="text-3xl font-bold text-white sm:text-4xl">Ready to secure your legacy?</h2>
           <div className="mt-8 flex justify-center gap-4">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90" asChild>
+            <Button size="lg" className="bg-accent text-foreground hover:bg-accent/90 font-semibold" asChild>
               <Link to="/pricing">Start Free Trial <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
           </div>
