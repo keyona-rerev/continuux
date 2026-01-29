@@ -7,37 +7,37 @@ const features = [
     icon: FolderLock,
     title: "Secure Document Storage",
     description:
-      "Upload and organize wills, insurance policies, property deeds, and any important documents with military-grade encryption.",
+      "Upload and organize birth certificates, ID documents, medical records, and emergency information with bank-level encryption.",
   },
   {
     icon: Users,
     title: "Trusted Contacts",
     description:
-      "Designate family members, attorneys, or advisors who can access your vault when you need them to—on your terms.",
+      "Designate family members, attorneys, or advocates who can access your vault instantly when you need them to.",
   },
   {
     icon: Bell,
     title: "Smart Notifications",
     description:
-      "Automated reminders for document renewals, policy expirations, and important dates you shouldn't miss.",
+      "Automated reminders for document renewals, ID expirations, and important dates you can't afford to miss.",
   },
   {
     icon: Key,
-    title: "Legacy Access",
+    title: "Emergency Access",
     description:
-      "Set up secure protocols for what happens to your digital assets in case of emergency or passing.",
+      "Set up secure protocols so the right people have access to the right information at the right time.",
   },
   {
     icon: Smartphone,
     title: "Access Anywhere",
     description:
-      "View and manage your vault from any device with our secure mobile app and web platform.",
+      "View and share your documents from any device—your vault travels with you, accessible 24/7.",
   },
   {
     icon: Shield,
-    title: "Audit Trail",
+    title: "Complete Privacy",
     description:
-      "Complete activity logs show who accessed what and when, giving you full transparency and control.",
+      "Your data stays private. We never sell your information and you control who sees what, always.",
   },
 ];
 
@@ -47,8 +47,8 @@ export function FeaturesSection() {
       <div className="container-wide">
         <SectionHeader
           badge="Features"
-          title="Everything you need to protect your legacy"
-          description="Powerful tools designed with simplicity in mind. Organize, protect, and share your most important documents."
+          title="Everything your family needs to stay protected"
+          description="Simple, powerful tools designed for real families facing real challenges. Set up in minutes, access forever."
         />
 
         <div className="mt-12 lg:mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

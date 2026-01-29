@@ -26,17 +26,17 @@ export function SectionHeader({
       {badge && (
         <div
           className={cn(
-            "inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-4"
+            "inline-flex items-center rounded-full bg-primary/10 border border-primary/20 px-4 py-2 text-sm font-semibold text-primary mb-4"
           )}
         >
           {badge}
         </div>
       )}
-      <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+      <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-[2.75rem] leading-tight">
         {title}
       </h2>
       {description && (
-        <p className="mt-4 text-lg text-muted-foreground lg:text-xl">
+        <p className="mt-4 text-lg text-muted-foreground lg:text-xl leading-relaxed">
           {description}
         </p>
       )}

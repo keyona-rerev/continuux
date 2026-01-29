@@ -1,134 +1,143 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Lock, Users, CheckCircle } from "lucide-react";
+import { ArrowRight, Shield, Lock, Users, CheckCircle, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { TrustBadge } from "@/components/ui/trust-badge";
 
 export function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background */}
+      {/* Background - Gradient with subtle purple tint overlay */}
       <div className="absolute inset-0 hero-gradient" />
       
-      {/* Animated floating orbs */}
+      {/* Subtle animated overlay */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-float-slow" />
-        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-accent/10 rounded-full blur-2xl animate-float-delayed" />
-        <div className="absolute top-1/2 right-1/3 w-32 h-32 bg-secondary/10 rounded-full blur-xl animate-float" />
-        <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-float-slow" />
-        <div className="absolute bottom-1/3 left-10 w-96 h-96 bg-secondary/5 rounded-full blur-3xl animate-float-delayed" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-delayed" />
+        <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-secondary/10 rounded-full blur-2xl animate-float" />
       </div>
 
-      <div className="container-wide relative z-10 pt-24 pb-16 lg:pt-32 lg:pb-24">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Content */}
+      <div className="container-wide relative z-10 py-24 lg:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Content - Left Side */}
           <div className="text-center lg:text-left stagger-children">
-            {/* Trust badges */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-6">
-              <TrustBadge 
-                icon={Shield} 
-                text="Bank-Level Security" 
-                variant="success" 
-                className="!bg-white/20 !text-white"
-              />
-              <TrustBadge 
-                icon={Lock} 
-                text="256-bit Encryption" 
-                variant="success" 
-                className="!bg-white/20 !text-white"
-              />
+            {/* Trust Badge */}
+            <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold mb-8 bg-white/10 border border-white/20 text-white">
+              <Shield className="h-4 w-4" />
+              <span>Protecting Families Since 2024</span>
             </div>
 
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-              Secure Your
-              <span className="block text-accent">Digital Legacy</span>
+            {/* Headline - Per brand spec: 64px, weight 800, line-height 1.1 */}
+            <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-[4rem] leading-[1.1]">
+              Your Family's
+              <span className="block text-primary brightness-125">Lifeline</span>
+              <span className="block">When It Matters Most</span>
             </h1>
             
-            <p className="mt-6 text-lg text-white/80 max-w-xl mx-auto lg:mx-0 lg:text-xl">
-              Organize your important documents, protect your family's future, and 
-              gain peace of mind with our secure digital vault. Estate planning made simple.
+            {/* Subheadline - Per brand spec: 20px, weight 400, line-height 1.6 */}
+            <p className="mt-8 text-lg lg:text-xl text-white/80 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              Keep your critical documents secure and instantly accessible. Because when families 
+              face separation, having the right information at the right time can change everything.
             </p>
 
-            {/* CTAs */}
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-accent text-foreground hover:bg-accent/90 text-base px-8 font-semibold shadow-lg" asChild>
+            {/* Trust Indicators */}
+            <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-3 text-white/90">
+              <div className="flex items-center gap-2">
+                <Check className="h-5 w-5 text-secondary" />
+                <span className="text-sm font-medium">Bank-Level Security</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="h-5 w-5 text-secondary" />
+                <span className="text-sm font-medium">10,000+ Families Protected</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="h-5 w-5 text-secondary" />
+                <span className="text-sm font-medium">Free Forever for Early Users</span>
+              </div>
+            </div>
+
+            {/* CTAs - Per brand spec: 18px 40px padding, 12px radius */}
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-10 py-6 rounded-xl font-bold shadow-glow hover:shadow-glow-hover transition-all duration-200 hover:-translate-y-0.5" 
+                asChild
+              >
                 <Link to="/pricing">
-                  Start Your Vault
+                  Start Your Vault - It's Free
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/40 bg-white/10 text-white hover:bg-white/20 text-base font-medium backdrop-blur-sm" asChild>
-                <Link to="/how-it-works">See How It Works</Link>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-white/30 bg-transparent text-white hover:border-primary hover:text-primary hover:bg-white/5 text-lg px-10 py-6 rounded-xl font-medium transition-all duration-200" 
+                asChild
+              >
+                <Link to="/how-it-works">Learn More</Link>
               </Button>
-            </div>
-
-            {/* Social proof */}
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 text-white/70">
-              <div className="flex items-center gap-2">
-                <Users className="h-5 w-5" />
-                <span className="text-sm">Join 10,000+ families</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-secondary" />
-                <span className="text-sm">14-day free trial</span>
-              </div>
             </div>
           </div>
 
-          {/* Hero Image / Mockup */}
+          {/* Hero Visual - Right Side - Interface Mockup */}
           <div className="relative lg:pl-8">
             <div className="relative mx-auto max-w-lg lg:max-w-none">
-              {/* Main card */}
-              <div className="relative rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-6 lg:p-8 shadow-2xl">
-                <div className="absolute -top-4 -right-4 bg-secondary text-secondary-foreground rounded-full px-4 py-1 text-sm font-medium shadow-lg">
-                  Secure
+              {/* Main Card - Per brand spec: 20px radius, white bg, elevated shadow */}
+              <div className="relative rounded-[20px] bg-white p-8 shadow-elevated">
+                {/* Header */}
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-lg font-semibold text-foreground">My Family Vault</h3>
+                  <div className="flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold bg-secondary/10 text-secondary">
+                    <CheckCircle className="h-3 w-3" />
+                    All Synced
+                  </div>
                 </div>
                 
-                {/* Mock vault interface */}
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 p-3 rounded-lg bg-white/10">
-                    <div className="h-10 w-10 rounded-lg bg-primary/20 flex items-center justify-center">
-                      <Shield className="h-5 w-5 text-white" />
+                {/* Document List - Per brand spec: light gray bg, 12px radius */}
+                <div className="space-y-3">
+                  <div className="flex items-center gap-4 p-4 rounded-xl bg-muted">
+                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Shield className="h-5 w-5 text-primary" />
                     </div>
-                    <div className="flex-1">
-                      <div className="h-3 w-24 bg-white/40 rounded" />
-                      <div className="mt-1 h-2 w-16 bg-white/20 rounded" />
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-foreground">Emergency Documents</p>
+                      <p className="text-xs text-muted-foreground">3 files • Shared with 2 contacts</p>
                     </div>
-                    <CheckCircle className="h-5 w-5 text-secondary" />
+                    <CheckCircle className="h-5 w-5 text-secondary shrink-0" />
                   </div>
                   
-                  <div className="flex items-center gap-3 p-3 rounded-lg bg-white/10">
-                    <div className="h-10 w-10 rounded-lg bg-accent/20 flex items-center justify-center">
-                      <Lock className="h-5 w-5 text-white" />
+                  <div className="flex items-center gap-4 p-4 rounded-xl bg-muted">
+                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Lock className="h-5 w-5 text-primary" />
                     </div>
-                    <div className="flex-1">
-                      <div className="h-3 w-32 bg-white/40 rounded" />
-                      <div className="mt-1 h-2 w-20 bg-white/20 rounded" />
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-foreground">Identity Documents</p>
+                      <p className="text-xs text-muted-foreground">5 files • Accessible anywhere</p>
                     </div>
-                    <CheckCircle className="h-5 w-5 text-secondary" />
+                    <CheckCircle className="h-5 w-5 text-secondary shrink-0" />
                   </div>
                   
-                  <div className="flex items-center gap-3 p-3 rounded-lg bg-white/10">
-                    <div className="h-10 w-10 rounded-lg bg-secondary/20 flex items-center justify-center">
-                      <Users className="h-5 w-5 text-white" />
+                  <div className="flex items-center gap-4 p-4 rounded-xl bg-muted">
+                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Users className="h-5 w-5 text-primary" />
                     </div>
-                    <div className="flex-1">
-                      <div className="h-3 w-28 bg-white/40 rounded" />
-                      <div className="mt-1 h-2 w-14 bg-white/20 rounded" />
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-foreground">Emergency Contacts</p>
+                      <p className="text-xs text-muted-foreground">8 contacts • Instantly notifiable</p>
                     </div>
-                    <CheckCircle className="h-5 w-5 text-secondary" />
+                    <CheckCircle className="h-5 w-5 text-secondary shrink-0" />
                   </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-white/10">
-                  <div className="flex items-center justify-between text-white/70 text-sm">
-                    <span>Documents protected</span>
-                    <span className="font-semibold text-white">247</span>
+                {/* Footer Stats */}
+                <div className="mt-6 pt-4 border-t border-border">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-muted-foreground">Documents protected</span>
+                    <span className="font-semibold text-foreground">247</span>
                   </div>
                 </div>
               </div>
 
-              {/* Floating elements */}
-              <div className="absolute -bottom-6 -left-6 rounded-xl bg-white p-4 shadow-elevated animate-float">
+              {/* Floating Confirmation Card */}
+              <div className="absolute -bottom-6 -left-6 rounded-2xl bg-white p-4 shadow-elevated animate-float border border-border">
                 <div className="flex items-center gap-3">
                   <div className="h-10 w-10 rounded-full bg-secondary/10 flex items-center justify-center">
                     <CheckCircle className="h-5 w-5 text-secondary" />
