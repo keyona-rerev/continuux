@@ -8,7 +8,6 @@ import continuuxLogo from "@/assets/continuux-logo.png";
 const navigation = [
   { name: "How It Works", href: "/how-it-works" },
   { name: "Pricing", href: "/pricing" },
-  { name: "Resources", href: "/resources" },
   { name: "About", href: "/about" },
   { name: "Security", href: "/security" },
 ];
@@ -33,10 +32,8 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-soft border-b border-border"
-          : "bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white",
+        isScrolled && "shadow-soft border-b border-border"
       )}
     >
       <nav className="container-wide">
@@ -74,7 +71,7 @@ export function Header() {
               <Link to="/login">Log In</Link>
             </Button>
             <Button size="sm" className="rounded-xl font-semibold" asChild>
-              <Link to="/pricing">Start Your Vault</Link>
+              <a href="https://app.getprismm.com/signup/new">Start Your Vault</a>
             </Button>
           </div>
 
@@ -116,7 +113,7 @@ export function Header() {
                   <Link to="/login">Log In</Link>
                 </Button>
                 <Button className="w-full rounded-xl font-semibold" asChild>
-                  <Link to="/pricing">Start Your Vault</Link>
+                  <a href="https://app.getprismm.com/signup/new">Start Your Vault</a>
                 </Button>
               </div>
             </div>

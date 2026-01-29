@@ -61,10 +61,10 @@ export function HeroSection() {
                 className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-10 py-6 rounded-xl font-bold shadow-glow hover:shadow-glow-hover transition-all duration-200 hover:-translate-y-0.5" 
                 asChild
               >
-                <Link to="/pricing">
+                <a href="https://app.getprismm.com/signup/new">
                   Start Your Vault - It's Free
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                </a>
               </Button>
               <Button 
                 size="lg" 
@@ -72,7 +72,7 @@ export function HeroSection() {
                 className="border-2 border-white/30 bg-transparent text-white hover:border-primary hover:text-primary hover:bg-white/5 text-lg px-10 py-6 rounded-xl font-medium transition-all duration-200" 
                 asChild
               >
-                <Link to="/how-it-works">Learn More</Link>
+                <Link to="/how-it-works">See How It Works</Link>
               </Button>
             </div>
           </div>

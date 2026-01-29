@@ -61,10 +61,10 @@ export function PricingPreviewSection() {
                 className="w-full text-lg py-6 rounded-xl font-bold shadow-glow hover:shadow-glow-hover transition-all duration-200 hover:-translate-y-0.5" 
                 asChild
               >
-                <Link to="/pricing">
+                <a href="https://app.getprismm.com/signup/new">
                   Start Your Vault - It's Free
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                </a>
               </Button>
               <p className="text-center text-sm text-muted-foreground">
                 No credit card required • Free forever for early users
