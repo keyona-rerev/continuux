@@ -20,7 +20,6 @@ const Partners = () => {
       <PageHero 
         title="Partner with Continuux"
         subtitle="Help families protect what matters most while growing your practice"
-        animation="network-pulse"
       />
 
       <SectionWrapper background="default" animation="dot-pulse">

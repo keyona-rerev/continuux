@@ -27,7 +27,6 @@ const HowItWorks = () => {
       <PageHero 
         title="How Continuux Works"
         subtitle="Protect your family in five simple steps"
-        animation="particle-field"
       />
 
       <SectionWrapper background="default" animation="dot-pulse">

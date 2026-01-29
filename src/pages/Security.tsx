@@ -19,7 +19,6 @@ const Security = () => {
       <PageHero 
         title="Security & Trust"
         subtitle="Your security is our foundation. Here's how we protect your family's most sensitive information."
-        animation="shield-matrix"
       />
 
       <SectionWrapper background="default" animation="gradient-sweep">
