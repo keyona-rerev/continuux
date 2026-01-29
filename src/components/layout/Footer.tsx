@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Shield, Mail, MapPin, Phone, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import continuuxLogo from "@/assets/continuux-logo.png";
 
 const footerLinks = {
   product: [
@@ -66,11 +65,11 @@ export function Footer() {
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <img 
-                src={continuuxLogo} 
-                alt="Continuux" 
-                className="h-12 w-auto"
-              />
+              <Shield className="h-10 w-10 text-primary" />
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold text-primary leading-tight">Continuux</span>
+                <span className="text-xs text-background/60 leading-tight">powered by Prismm</span>
+              </div>
             </Link>
             <p className="text-background/70 mb-6 max-w-sm leading-relaxed">
               Keep your family's critical documents secure and instantly accessible. 

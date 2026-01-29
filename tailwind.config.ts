@@ -194,6 +194,64 @@ export default {
           "70%": { transform: "translate(9%, 4%)" },
           "90%": { transform: "translate(-1%, 7%)" },
         },
+        // New hero animations
+        "particle-drift-1": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)", opacity: "0.6" },
+          "25%": { transform: "translate(50px, -30px) scale(1.2)", opacity: "0.8" },
+          "50%": { transform: "translate(100px, 20px) scale(0.8)", opacity: "0.4" },
+          "75%": { transform: "translate(30px, 50px) scale(1.1)", opacity: "0.7" },
+        },
+        "particle-drift-2": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)", opacity: "0.5" },
+          "33%": { transform: "translate(-40px, 60px) scale(1.3)", opacity: "0.9" },
+          "66%": { transform: "translate(80px, -20px) scale(0.7)", opacity: "0.3" },
+        },
+        "particle-drift-3": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)", opacity: "0.7" },
+          "20%": { transform: "translate(70px, 40px) scale(0.9)", opacity: "0.5" },
+          "40%": { transform: "translate(-30px, 80px) scale(1.4)", opacity: "0.8" },
+          "60%": { transform: "translate(-60px, -10px) scale(1.1)", opacity: "0.6" },
+          "80%": { transform: "translate(40px, -50px) scale(0.8)", opacity: "0.4" },
+        },
+        "ripple-expand": {
+          "0%": { transform: "scale(0)", opacity: "0.6" },
+          "50%": { opacity: "0.3" },
+          "100%": { transform: "scale(2.5)", opacity: "0" },
+        },
+        "ripple-expand-delayed": {
+          "0%": { transform: "scale(0)", opacity: "0.5" },
+          "50%": { opacity: "0.25" },
+          "100%": { transform: "scale(3)", opacity: "0" },
+        },
+        "scan-beam": {
+          "0%": { transform: "translateY(-100%)", opacity: "0" },
+          "10%": { opacity: "0.8" },
+          "90%": { opacity: "0.8" },
+          "100%": { transform: "translateY(100vh)", opacity: "0" },
+        },
+        "grid-pulse": {
+          "0%, 100%": { opacity: "0.15" },
+          "50%": { opacity: "0.25" },
+        },
+        "aurora-flow": {
+          "0%": { transform: "translateX(-100%) rotate(-10deg) skewX(-5deg)" },
+          "50%": { transform: "translateX(0%) rotate(5deg) skewX(3deg)" },
+          "100%": { transform: "translateX(100%) rotate(-10deg) skewX(-5deg)" },
+        },
+        "aurora-flow-reverse": {
+          "0%": { transform: "translateX(100%) rotate(10deg) skewX(5deg)" },
+          "50%": { transform: "translateX(0%) rotate(-5deg) skewX(-3deg)" },
+          "100%": { transform: "translateX(-100%) rotate(10deg) skewX(5deg)" },
+        },
+        "node-pulse": {
+          "0%, 100%": { opacity: "0.3", transform: "scale(1)" },
+          "50%": { opacity: "0.8", transform: "scale(1.5)" },
+        },
+        "connection-pulse": {
+          "0%": { opacity: "0.1", strokeDashoffset: "100" },
+          "50%": { opacity: "0.5" },
+          "100%": { opacity: "0.1", strokeDashoffset: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -217,6 +275,18 @@ export default {
         "dot-pulse": "dot-pulse 3s ease-in-out infinite",
         "radial-pulse": "radial-pulse 6s ease-in-out infinite",
         "grain": "grain 8s steps(10) infinite",
+        // New hero animations
+        "particle-drift-1": "particle-drift-1 8s ease-in-out infinite",
+        "particle-drift-2": "particle-drift-2 12s ease-in-out infinite",
+        "particle-drift-3": "particle-drift-3 10s ease-in-out infinite",
+        "ripple-expand": "ripple-expand 4s ease-out infinite",
+        "ripple-expand-delayed": "ripple-expand-delayed 4s ease-out infinite 2s",
+        "scan-beam": "scan-beam 6s ease-in-out infinite",
+        "grid-pulse": "grid-pulse 3s ease-in-out infinite",
+        "aurora-flow": "aurora-flow 15s ease-in-out infinite",
+        "aurora-flow-reverse": "aurora-flow-reverse 18s ease-in-out infinite",
+        "node-pulse": "node-pulse 3s ease-in-out infinite",
+        "connection-pulse": "connection-pulse 4s linear infinite",
       },
       boxShadow: {
         "soft": "0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)",
