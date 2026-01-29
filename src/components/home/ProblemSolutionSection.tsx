@@ -1,32 +1,32 @@
-import { FileX, Clock, Users, AlertTriangle, ArrowRight, CheckCircle } from "lucide-react";
+import { FileX, Clock, Users, AlertTriangle, ArrowRight, CheckCircle, Heart } from "lucide-react";
 
 const problems = [
   {
     icon: FileX,
-    title: "Scattered Documents",
-    description: "Important papers in filing cabinets, desk drawers, safe deposit boxes, and digital folders",
+    title: "Documents Scattered Everywhere",
+    description: "Important papers in filing cabinets, desks, safe deposit boxes, and digital folders—impossible to find in an emergency",
   },
   {
     icon: Clock,
     title: "No Plan for Emergencies",
-    description: "Family left scrambling if something happens to you—no access, no instructions",
+    description: "Family left scrambling if something happens—no access to critical information, no instructions",
   },
   {
     icon: Users,
     title: "Communication Gaps",
-    description: "Loved ones don't know where to find critical information when they need it most",
+    description: "Loved ones don't know where to find what they need when every second counts",
   },
   {
     icon: AlertTriangle,
     title: "Security Risks",
-    description: "Sensitive data spread across emails, cloud drives, and physical locations",
+    description: "Sensitive data spread across emails, cloud drives, and physical locations—vulnerable and unprotected",
   },
 ];
 
 const solutions = [
   "One secure vault for all your documents",
   "Trusted contacts get access when needed",
-  "Clear organization and instructions",
+  "Accessible from anywhere, on any device",
   "Bank-level encryption protection",
 ];
 
@@ -37,15 +37,15 @@ export function ProblemSolutionSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Problem Side */}
           <div>
-            <div className="inline-flex items-center rounded-full bg-destructive/10 px-4 py-1.5 text-sm font-medium text-destructive mb-6">
-              The Problem
+            <div className="inline-flex items-center rounded-full bg-destructive/10 px-4 py-2 text-sm font-semibold text-destructive mb-6">
+              The Challenge
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
-              Your digital life is a mess waiting to happen
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-[2.75rem] leading-tight mb-6">
+              Family separation can happen without warning
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Most people have critical documents scattered everywhere—and no plan for 
-              what happens if they're suddenly unavailable.
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              When families face unexpected separation, having the right documents accessible 
+              can make the difference between resolution and prolonged uncertainty.
             </p>
             
             <div className="space-y-4">
@@ -73,16 +73,16 @@ export function ProblemSolutionSection() {
               <ArrowRight className="h-8 w-8 text-primary" />
             </div>
             
-            <div className="bg-card rounded-2xl border border-border p-8 lg:p-10 shadow-soft">
-              <div className="inline-flex items-center rounded-full bg-secondary/10 px-4 py-1.5 text-sm font-medium text-secondary mb-6">
+            <div className="bg-card rounded-[20px] border border-border p-8 lg:p-10 shadow-elevated">
+              <div className="inline-flex items-center rounded-full bg-secondary/10 px-4 py-2 text-sm font-semibold text-secondary mb-6">
                 The Solution
               </div>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
-                Continuux brings order to chaos
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-[2.75rem] leading-tight mb-6">
+                Continuux keeps your family connected
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                A single, secure digital vault that organizes your entire legacy—
-                and ensures the right people have access at the right time.
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                A secure digital vault that ensures your loved ones have instant access 
+                to every document they need—no matter what happens.
               </p>
               
               <div className="space-y-4">
@@ -99,11 +99,11 @@ export function ProblemSolutionSection() {
               <div className="mt-8 pt-6 border-t border-border">
                 <div className="flex items-center gap-4">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-2xl">🔐</span>
+                    <Heart className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">Peace of mind, guaranteed</p>
-                    <p className="text-sm text-muted-foreground">Your legacy protected, your family prepared</p>
+                    <p className="text-sm text-muted-foreground">Your family protected, your legacy secure</p>
                   </div>
                 </div>
               </div>

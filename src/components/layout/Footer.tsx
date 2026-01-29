@@ -10,26 +10,22 @@ const footerLinks = {
     { name: "Pricing", href: "/pricing" },
     { name: "Security", href: "/security" },
     { name: "Mobile App", href: "#" },
-    { name: "Integrations", href: "#" },
   ],
   resources: [
-    { name: "Blog", href: "/resources" },
+    { name: "Resource Center", href: "/resources" },
     { name: "Guides", href: "/resources" },
-    { name: "Case Studies", href: "/resources" },
-    { name: "Webinars", href: "/resources" },
     { name: "Help Center", href: "#" },
+    { name: "Community", href: "#" },
   ],
   company: [
     { name: "About Us", href: "/about" },
-    { name: "Careers", href: "/about#careers" },
-    { name: "Press", href: "/about#press" },
     { name: "Partners", href: "/partners" },
+    { name: "Careers", href: "/about#careers" },
     { name: "Contact", href: "#" },
   ],
   legal: [
     { name: "Privacy Policy", href: "#" },
     { name: "Terms of Service", href: "#" },
-    { name: "Cookie Policy", href: "#" },
     { name: "GDPR", href: "#" },
     { name: "Accessibility", href: "#" },
   ],
@@ -51,19 +47,19 @@ export function Footer() {
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
             <div className="max-w-xl">
               <h3 className="text-2xl font-bold mb-2">
-                Stay informed about digital legacy planning
+                Stay informed about family protection
               </h3>
               <p className="text-background/70">
-                Get expert tips, product updates, and insights delivered to your inbox.
+                Get helpful tips, product updates, and resources for keeping your family prepared.
               </p>
             </div>
             <form className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="bg-background/10 border-background/20 text-background placeholder:text-background/50 min-w-[280px]"
+                className="bg-background/10 border-background/20 text-background placeholder:text-background/50 min-w-[280px] rounded-xl"
               />
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground whitespace-nowrap">
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground whitespace-nowrap rounded-xl font-semibold">
                 Subscribe
               </Button>
             </form>
@@ -79,13 +75,13 @@ export function Footer() {
             <Link to="/" className="flex items-center gap-2 mb-4">
               <img 
                 src={continuuxLogo} 
-                alt="Continuux powered by Prismm" 
+                alt="Continuux" 
                 className="h-12 w-auto"
               />
             </Link>
-            <p className="text-background/70 mb-6 max-w-sm">
-              Secure your digital legacy. Organize your important documents, 
-              protect your family's future, and gain peace of mind.
+            <p className="text-background/70 mb-6 max-w-sm leading-relaxed">
+              Keep your family's critical documents secure and instantly accessible. 
+              Because when it matters most, every second counts.
             </p>
             <div className="space-y-3 text-sm text-background/70">
               <div className="flex items-center gap-2">
@@ -179,13 +175,13 @@ export function Footer() {
               © {new Date().getFullYear()} Continuux. All rights reserved.
             </p>
             <div className="hidden md:flex items-center gap-2">
-              <div className="trust-badge !bg-secondary/20 !text-secondary">
+              <div className="inline-flex items-center gap-1.5 rounded-full bg-secondary/20 px-3 py-1 text-xs font-semibold text-secondary">
                 <Shield className="h-3 w-3" />
-                <span className="text-xs">SOC 2 Certified</span>
+                <span>Bank-Level Security</span>
               </div>
-              <div className="trust-badge !bg-secondary/20 !text-secondary">
+              <div className="inline-flex items-center gap-1.5 rounded-full bg-secondary/20 px-3 py-1 text-xs font-semibold text-secondary">
                 <Shield className="h-3 w-3" />
-                <span className="text-xs">256-bit Encryption</span>
+                <span>256-bit Encryption</span>
               </div>
             </div>
           </div>
@@ -201,15 +197,6 @@ export function Footer() {
               </a>
             ))}
           </div>
-        </div>
-      </div>
-
-      {/* Continuux tagline */}
-      <div className="border-t border-background/10 py-4">
-        <div className="container-wide text-center">
-          <p className="text-xs text-background/50">
-            <span className="font-medium">Continuux</span> powered by Prismm — Secure your digital legacy
-          </p>
         </div>
       </div>
     </footer>

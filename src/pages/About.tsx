@@ -5,7 +5,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { Shield, Heart, Lock, Users, Eye, Sparkles } from "lucide-react";
 
 const team = [
-  { name: "Sarah Chen", role: "CEO & Co-Founder", bio: "Former estate planning attorney with 15 years experience" },
+  { name: "Sarah Chen", role: "CEO & Co-Founder", bio: "Former immigration attorney with 15 years experience helping families" },
   { name: "Michael Torres", role: "CTO & Co-Founder", bio: "Security expert, previously led infrastructure at a major bank" },
   { name: "Emily Watson", role: "Head of Product", bio: "Passionate about making complex tools simple and accessible" },
   { name: "David Kim", role: "Head of Customer Success", bio: "Dedicated to helping families protect what matters most" },
@@ -13,26 +13,25 @@ const team = [
 
 const values = [
   { icon: Shield, title: "Security First", description: "Your data protection is our top priority. We use bank-level encryption." },
-  { icon: Heart, title: "Empathy", description: "We understand the emotional weight of legacy planning and treat it with care." },
+  { icon: Heart, title: "Compassion", description: "We understand the emotional weight of family preparedness and treat it with care." },
   { icon: Lock, title: "Privacy", description: "Your information is yours. We never sell or share your data." },
-  { icon: Users, title: "Family Focus", description: "Built for real families with real needs, not just tech enthusiasts." },
+  { icon: Users, title: "Family Focus", description: "Built for real families facing real challenges, not just tech enthusiasts." },
   { icon: Eye, title: "Transparency", description: "Clear pricing, clear policies, clear communication. No surprises." },
   { icon: Sparkles, title: "Simplicity", description: "Powerful features wrapped in an interface anyone can use." },
 ];
 
 const timeline = [
-  { year: "2021", event: "Prismm founded with a mission to democratize estate planning" },
-  { year: "2022", event: "Launched beta with 1,000 founding families" },
-  { year: "2023", event: "Reached 10,000 families, achieved SOC 2 certification" },
-  { year: "2024", event: "Expanded partnerships with financial advisors nationwide" },
+  { year: "2023", event: "Continuux founded with a mission to help families stay connected" },
+  { year: "2024", event: "Launched beta with 1,000 founding families, achieved SOC 2 certification" },
+  { year: "2025", event: "Reached 10,000 families protected, expanded partnerships nationwide" },
 ];
 
 const About = () => {
   return (
     <Layout>
       <PageHero 
-        title="About Prismm"
-        subtitle="On a mission to help every family secure their digital legacy"
+        title="About Continuux"
+        subtitle="On a mission to help every family stay protected and connected"
         animation="aurora"
       />
 
@@ -41,9 +40,9 @@ const About = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-foreground">Our Mission</h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              We believe that protecting your family's future shouldn't require expensive lawyers or complicated software. 
-              Prismm was born from a simple idea: everyone deserves a secure, organized place for their most important documents—
-              and a clear plan for what happens to them.
+              We believe that protecting your family shouldn't require expensive lawyers or complicated software. 
+              Continuux was born from a simple idea: every family deserves a secure, organized place for their 
+              most important documents—instantly accessible when it matters most.
             </p>
           </div>
         </div>
@@ -54,10 +53,10 @@ const About = () => {
           <SectionHeader badge="Our Values" title="What we stand for" />
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {values.map((v) => (
-              <div key={v.title} className="p-6 rounded-xl bg-card border border-border">
+              <div key={v.title} className="p-6 rounded-[20px] bg-card border border-border">
                 <v.icon className="h-10 w-10 text-primary mb-4" />
                 <h3 className="font-semibold text-foreground">{v.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{v.description}</p>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{v.description}</p>
               </div>
             ))}
           </div>
@@ -69,10 +68,10 @@ const About = () => {
           <SectionHeader badge="Leadership" title="Meet the team" />
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((member) => (
-              <div key={member.name} className="text-center p-6 rounded-xl bg-card border border-border">
-                <div className="h-24 w-24 mx-auto rounded-full bg-muted flex items-center justify-center text-2xl font-bold text-muted-foreground">{member.name.charAt(0)}</div>
+              <div key={member.name} className="text-center p-6 rounded-[20px] bg-card border border-border">
+                <div className="h-24 w-24 mx-auto rounded-full bg-primary/10 flex items-center justify-center text-2xl font-bold text-primary">{member.name.charAt(0)}</div>
                 <h3 className="mt-4 font-semibold text-foreground">{member.name}</h3>
-                <p className="text-sm text-primary">{member.role}</p>
+                <p className="text-sm text-primary font-medium">{member.role}</p>
                 <p className="mt-2 text-sm text-muted-foreground">{member.bio}</p>
               </div>
             ))}
@@ -101,7 +100,7 @@ const About = () => {
         </div>
         <div id="careers" className="container-wide relative z-10 text-center text-white">
           <h2 className="text-3xl font-bold">Join Our Team</h2>
-          <p className="mt-4 text-white/80 max-w-xl mx-auto">We're always looking for talented people who share our mission. Check back soon for open positions.</p>
+          <p className="mt-4 text-white/80 max-w-xl mx-auto leading-relaxed">We're always looking for talented people who share our mission. Check back soon for open positions.</p>
         </div>
       </section>
     </Layout>

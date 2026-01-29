@@ -18,7 +18,7 @@ const Security = () => {
     <Layout>
       <PageHero 
         title="Security & Trust"
-        subtitle="Your security is our foundation. Here's how we protect your most sensitive information."
+        subtitle="Your security is our foundation. Here's how we protect your family's most sensitive information."
         animation="wave-pulse"
       />
 
@@ -27,10 +27,10 @@ const Security = () => {
           <SectionHeader badge="Protection" title="How we keep your data safe" />
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {securityFeatures.map((f) => (
-              <div key={f.title} className="p-6 rounded-xl bg-card border border-border shadow-soft">
+              <div key={f.title} className="p-6 rounded-[20px] bg-card border border-border shadow-soft">
                 <f.icon className="h-10 w-10 text-secondary mb-4" />
                 <h3 className="font-semibold text-foreground">{f.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{f.description}</p>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{f.description}</p>
               </div>
             ))}
           </div>
@@ -41,15 +41,15 @@ const Security = () => {
         <div className="container-wide max-w-3xl">
           <SectionHeader title="Your Data, Your Control" description="We believe privacy is a fundamental right. Here's our commitment to you." />
           <div className="mt-12 space-y-6">
-            <div className="p-6 rounded-xl bg-card border border-border">
+            <div className="p-6 rounded-[20px] bg-card border border-border">
               <h3 className="font-semibold text-foreground">We never sell your data</h3>
               <p className="mt-2 text-muted-foreground">Your information is never sold, shared, or used for advertising. Period.</p>
             </div>
-            <div className="p-6 rounded-xl bg-card border border-border">
+            <div className="p-6 rounded-[20px] bg-card border border-border">
               <h3 className="font-semibold text-foreground">You can export anytime</h3>
               <p className="mt-2 text-muted-foreground">Download all your documents and data whenever you want. No lock-in.</p>
             </div>
-            <div className="p-6 rounded-xl bg-card border border-border">
+            <div className="p-6 rounded-[20px] bg-card border border-border">
               <h3 className="font-semibold text-foreground">Right to deletion</h3>
               <p className="mt-2 text-muted-foreground">Request complete deletion of your account and all associated data at any time.</p>
             </div>

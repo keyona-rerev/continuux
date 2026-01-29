@@ -73,8 +73,8 @@ export function Header() {
             <Button variant="ghost" size="sm" asChild>
               <Link to="/login">Log In</Link>
             </Button>
-            <Button size="sm" asChild>
-              <Link to="/pricing">Get Started</Link>
+            <Button size="sm" className="rounded-xl font-semibold" asChild>
+              <Link to="/pricing">Start Your Vault</Link>
             </Button>
           </div>
 
@@ -112,11 +112,11 @@ export function Header() {
                 </Link>
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t border-border mt-4">
-                <Button variant="outline" className="w-full" asChild>
+                <Button variant="outline" className="w-full rounded-xl" asChild>
                   <Link to="/login">Log In</Link>
                 </Button>
-                <Button className="w-full" asChild>
-                  <Link to="/pricing">Get Started</Link>
+                <Button className="w-full rounded-xl font-semibold" asChild>
+                  <Link to="/pricing">Start Your Vault</Link>
                 </Button>
               </div>
             </div>

@@ -65,14 +65,43 @@ export default {
           DEFAULT: "hsl(var(--warning))",
           foreground: "hsl(var(--warning-foreground))",
         },
+        indigo: {
+          DEFAULT: "hsl(var(--indigo))",
+          deep: "hsl(var(--indigo-deep))",
+        },
+        emerald: "hsl(var(--emerald))",
+        charcoal: "hsl(var(--charcoal))",
+        slate: "hsl(var(--slate))",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        "xl": "1rem",
+        "2xl": "1.25rem",
+        "3xl": "1.5rem",
       },
       fontFamily: {
-        sans: ["Nimbus Sans", "Inter", "system-ui", "sans-serif"],
+        // System font stack per brand brief - no custom fonts
+        sans: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "'Segoe UI'",
+          "Roboto",
+          "Oxygen",
+          "Ubuntu",
+          "Cantarell",
+          "'Fira Sans'",
+          "'Droid Sans'",
+          "'Helvetica Neue'",
+          "sans-serif",
+        ],
+      },
+      fontSize: {
+        // H1: 64px per brand spec
+        "hero": ["4rem", { lineHeight: "1.1", letterSpacing: "-0.025em", fontWeight: "800" }],
+        // Subtitle/Lead: 20px per brand spec
+        "lead": ["1.25rem", { lineHeight: "1.6", fontWeight: "400" }],
       },
       keyframes: {
         "accordion-down": {
@@ -191,8 +220,14 @@ export default {
       },
       boxShadow: {
         "soft": "0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)",
-        "elevated": "0 10px 40px -10px rgba(0, 0, 0, 0.1), 0 2px 10px -2px rgba(0, 0, 0, 0.04)",
-        "glow": "0 0 20px rgba(37, 99, 235, 0.3)",
+        "elevated": "0 20px 60px rgba(0, 0, 0, 0.1)",
+        "glow": "0 4px 20px rgba(99, 102, 241, 0.3)",
+        "glow-hover": "0 6px 25px rgba(99, 102, 241, 0.4)",
+      },
+      spacing: {
+        // Brand spec spacing scale
+        "18": "4.5rem",
+        "22": "5.5rem",
       },
     },
   },

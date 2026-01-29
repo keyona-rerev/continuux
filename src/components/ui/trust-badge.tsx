@@ -17,11 +17,11 @@ export function TrustBadge({
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium",
+        "inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold border",
         {
-          "bg-primary/10 text-primary": variant === "default",
-          "bg-secondary/10 text-secondary": variant === "success",
-          "bg-muted text-muted-foreground": variant === "muted",
+          "bg-primary/10 border-primary/20 text-primary": variant === "default",
+          "bg-secondary/10 border-secondary/20 text-secondary": variant === "success",
+          "bg-muted border-border text-muted-foreground": variant === "muted",
         },
         className
       )}
