@@ -28,14 +28,14 @@ const Pricing = () => {
       <DarkHeroSection
         badge={{
           icon: CheckCircle,
-          text: "Free Forever for Early Users"
+          text: "Limited Time Offer"
         }}
         headline={{
-          line1: "",
-          line3: "That Fits Your Family's Needs"
+          line1: "Family Accounts Are",
+          line3: "During This Time of Crisis"
         }}
-        highlightedText="Protection"
-        subtitle="Start with everything your family needs to stay connected and protected. Upgrade anytime as your needs grow—no pressure, no tricks."
+        highlightedText="Free"
+        subtitle="For a limited time, we're offering full family protection accounts at no cost. Every family deserves security and peace of mind—especially now."
         gridType="features"
         gridItems={[
           {
