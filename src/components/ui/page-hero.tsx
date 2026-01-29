@@ -29,7 +29,7 @@ export function PageHero({
 }: PageHeroProps) {
   return (
     <section className={cn(
-      "relative min-h-[90vh] flex items-center justify-center overflow-hidden",
+      "relative min-h-[60vh] flex items-center justify-center overflow-hidden",
       className
     )}>
       {/* Base gradient */}

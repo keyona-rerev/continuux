@@ -9,6 +9,7 @@ import Pricing from "./pages/Pricing";
 import About from "./pages/About";
 import Security from "./pages/Security";
 import Partners from "./pages/Partners";
+import PrismmRedirect from "./pages/PrismmRedirect";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/security" element={<Security />} />
           <Route path="/partners" element={<Partners />} />
+          <Route path="/signup" element={<PrismmRedirect />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
