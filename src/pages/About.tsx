@@ -25,7 +25,6 @@ const About = () => {
       <PageHero 
         title="About Continuux"
         subtitle="On a mission to help every family stay protected and connected"
-        animation="aurora-waves"
       />
 
       <SectionWrapper background="default" animation="radial-glow">

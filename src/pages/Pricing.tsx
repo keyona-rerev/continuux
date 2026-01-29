@@ -28,7 +28,6 @@ const Pricing = () => {
       <PageHero 
         title="Simple, Transparent Pricing"
         subtitle="One plan with everything your family needs. No hidden fees, no surprises."
-        animation="ripple-pulse"
       />
 
       <SectionWrapper background="default" animation="gradient-sweep" className="-mt-16">
