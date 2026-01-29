@@ -69,7 +69,7 @@ export function Header() {
               <Link to="/login">Log In</Link>
             </Button>
             <Button size="sm" className="rounded-xl font-semibold" asChild>
-              <a href="https://app.getprismm.com/signup/new">Start Your Vault</a>
+              <Link to="/signup">Start Your Vault</Link>
             </Button>
           </div>
 
@@ -111,7 +111,7 @@ export function Header() {
                   <Link to="/login">Log In</Link>
                 </Button>
                 <Button className="w-full rounded-xl font-semibold" asChild>
-                  <a href="https://app.getprismm.com/signup/new">Start Your Vault</a>
+                  <Link to="/signup">Start Your Vault</Link>
                 </Button>
               </div>
             </div>
