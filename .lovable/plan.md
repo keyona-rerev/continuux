@@ -1,118 +1,103 @@
 
-# Plan: Standin Logo + Full-Size Hero Sections with Unique Overlays
 
-## Overview
-This plan addresses two issues: the current logo is too small in the header, and the subpage hero sections (How It Works, Pricing, Security, Partners, About) are "chopped" compared to the homepage hero. We'll create a larger standin logo and expand all `PageHero` sections to match the homepage's dramatic `min-h-[90vh]` sizing, each with a unique animated overlay for you to compare.
+# Plan: Reframe Pricing Page to Eliminate Confusion
 
----
+## The Problem
+Currently, the pricing page has conflicting messages:
+- Hero says "Family Accounts Are **Free** During This Time of Crisis"
+- Below that, a big "$99/year" pricing card appears
+- Then there's a separate "Apply for Free Account" section
 
-## Changes
+Users are confused: Is it free or $99? Do I need to apply?
 
-### 1. Standin Logo for Header
-Replace the current small uploaded logo with a styled text-based standin logo that's larger and more visible.
-
-**File:** `src/components/layout/Header.tsx`
-- Replace the `<img>` logo with a styled text treatment:
-  - "Continuux" in bold indigo (#6366f1) at 24px
-  - "powered by Prismm" in smaller muted text below or inline
-  - Shield icon accent for brand recognition
-- This ensures visibility while awaiting the final logo asset
+## The Solution
+Reframe the pricing card as "What You're Getting (Normally $99/year)" to show the value they're receiving for free, while making the current free offer the primary focus.
 
 ---
 
-### 2. Expand PageHero Component
-Make all subpage heroes full-viewport height with centered content.
+## Changes to `src/pages/Pricing.tsx`
 
-**File:** `src/components/ui/page-hero.tsx`
-- Change `min-h-[320px]` to `min-h-[90vh]` with `flex items-center`
-- Increase title size to match homepage (`text-5xl lg:text-6xl xl:text-[4rem]`)
-- Add more dramatic, unique animation overlays
+### 1. Reframe the Pricing Card Header
+Change from showing "$99" as the main price to showing it's **FREE NOW** with the normal value crossed out
 
----
-
-### 3. Five Unique Animation Overlays (One Per Page)
-Each page gets a distinct CSS-only animated background for comparison:
-
-| Page | Animation Name | Effect Description |
-|------|----------------|-------------------|
-| **How It Works** | `particle-field` | Multiple small dots floating and drifting in different directions |
-| **Pricing** | `ripple-pulse` | Concentric circles expanding outward from center |
-| **Security** | `shield-matrix` | Subtle grid lines with scanning beam effect |
-| **About** | `aurora-waves` | Flowing color bands like northern lights |
-| **Partners** | `network-pulse` | Interconnected nodes with pulsing connections |
-
-**File:** `tailwind.config.ts`
-- Add 5 new keyframe animations
-- Add corresponding animation utility classes
-
-**File:** `src/components/ui/page-hero.tsx`
-- Add 5 new animation variant options
-- Implement each overlay with layered CSS elements
-
----
-
-### 4. Update Each Page to Use New Animations
-
-| File | New Animation |
-|------|---------------|
-| `src/pages/HowItWorks.tsx` | `particle-field` |
-| `src/pages/Pricing.tsx` | `ripple-pulse` |
-| `src/pages/Security.tsx` | `shield-matrix` |
-| `src/pages/About.tsx` | `aurora-waves` |
-| `src/pages/Partners.tsx` | `network-pulse` |
-
----
-
-## Technical Details
-
-### Standin Logo Styling
-```text
-+----------------------------------+
-| [Shield Icon] Continuux          |
-|              powered by Prismm   |
-+----------------------------------+
+**Current:**
 ```
-- Main text: `text-2xl font-bold text-primary`
-- Subtitle: `text-xs text-muted-foreground`
-
-### Animation Keyframes (added to Tailwind)
-- `particle-drift-1/2/3`: Random floating motion paths
-- `ripple-expand`: Scale from 0 to 200% with fade
-- `scan-beam`: Vertical sweep with glow
-- `aurora-flow`: Horizontal color wave motion
-- `node-pulse`: Opacity pulse for network nodes
-
-### Hero Section Structure
-```text
-+-----------------------------------------------+
-|                                               |
-|          [Animated Background Overlay]        |
-|                                               |
-|               PAGE TITLE                      |
-|           Subtitle description                |
-|                                               |
-|                                               |
-+-----------------------------------------------+
-Height: 90vh (matches homepage)
+Complete Protection
+$99/year
+Just $8.25/month • Free for early users
 ```
+
+**New:**
+```
+What You're Getting — Free
+$99/year (crossed out) → $0 Today
+A $99/year value, yours free during this time of crisis
+```
+
+### 2. Update the Card Badge
+- Change "Complete Protection" badge to "Free During Crisis" or "Limited Time: Free"
+
+### 3. Visual Treatment for Original Price
+- Show "$99/year" with a strikethrough style
+- Add large "$0" or "FREE" as the prominent price
+- Add context line: "Normally $99/year — free for families who need it now"
+
+### 4. Remove the Separate "Apply for Free Account" Section
+Since everyone is getting it free during the crisis, the hardship application section is redundant and adds confusion. Remove it entirely.
+
+### 5. Update CTA Button Text
+Keep "Start Your Vault - It's Free" which already works well
+
+### 6. Update FAQs
+Add/modify FAQs to address:
+- "How long is it free?" → "During this time of crisis, we're offering free accounts to all families. When the offer ends, you'll be notified in advance."
+- "Will I be charged later?" → "No automatic charges. When the free period ends, you'll have the option to continue at $99/year or export your data."
+
+---
+
+## Visual Layout (After Changes)
+
+```
+┌─────────────────────────────────────────────────┐
+│            FREE DURING CRISIS (badge)           │
+│                                                 │
+│     ~~$99/year~~  →  $0 TODAY                  │
+│                                                 │
+│  A $99/year value, yours free while families   │
+│           need protection most                  │
+│                                                 │
+│  ✓ Unlimited document storage                   │
+│  ✓ Up to 5 trusted contacts                     │
+│  ✓ Bank-level encryption                        │
+│  ... (all features)                             │
+│                                                 │
+│  [  Start Your Vault - It's Free  →  ]          │
+│                                                 │
+│  No credit card required                        │
+└─────────────────────────────────────────────────┘
+```
+
+---
+
+## Updated FAQ Section
+
+| Question | Answer |
+|----------|--------|
+| How long is it free? | During this time of crisis, we're offering free accounts to all families. We'll notify you well in advance if this changes. |
+| Will I be charged automatically? | No. We will never charge you without your consent. If the free period ends, you choose whether to continue. |
+| What happens to my data if I don't upgrade? | Your data is always yours. You can export everything at any time, and we give 30 days notice before any changes. |
 
 ---
 
 ## Files to Modify
-1. `src/components/layout/Header.tsx` - Standin logo
-2. `src/components/ui/page-hero.tsx` - Expanded hero + new animations
-3. `tailwind.config.ts` - New keyframes and animation utilities
-4. `src/pages/HowItWorks.tsx` - Use `particle-field`
-5. `src/pages/Pricing.tsx` - Use `ripple-pulse`
-6. `src/pages/Security.tsx` - Use `shield-matrix`
-7. `src/pages/About.tsx` - Use `aurora-waves`
-8. `src/pages/Partners.tsx` - Use `network-pulse`
-9. `src/components/layout/Footer.tsx` - Update logo treatment to match header
+1. `src/pages/Pricing.tsx` — Reframe pricing card, remove hardship application, update FAQs
 
 ---
 
 ## Result
-After implementation, you'll be able to visit each page and see:
-- A clear, visible standin logo in the header
-- Full-viewport hero sections that aren't "chopped"
-- Five distinct animated overlays to compare and choose from
+Users will clearly understand:
+- It's FREE right now (no confusion)
+- The normal value is $99/year (so they know it's a good deal)
+- No hidden charges or surprises
+- Simple, single path to sign up
+
