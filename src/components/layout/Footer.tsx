@@ -11,16 +11,9 @@ const footerLinks = {
     { name: "Security", href: "/security" },
     { name: "Mobile App", href: "#" },
   ],
-  resources: [
-    { name: "Resource Center", href: "/resources" },
-    { name: "Guides", href: "/resources" },
-    { name: "Help Center", href: "#" },
-    { name: "Community", href: "#" },
-  ],
   company: [
     { name: "About Us", href: "/about" },
     { name: "Partners", href: "/partners" },
-    { name: "Careers", href: "/about#careers" },
     { name: "Contact", href: "#" },
   ],
   legal: [
@@ -104,23 +97,6 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-sm text-background/70 hover:text-background transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources Links */}
-          <div>
-            <h4 className="font-semibold mb-4">Resources</h4>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}

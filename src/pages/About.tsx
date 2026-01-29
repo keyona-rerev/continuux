@@ -4,13 +4,6 @@ import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Shield, Heart, Lock, Users, Eye, Sparkles } from "lucide-react";
 
-const team = [
-  { name: "Sarah Chen", role: "CEO & Co-Founder", bio: "Former immigration attorney with 15 years experience helping families" },
-  { name: "Michael Torres", role: "CTO & Co-Founder", bio: "Security expert, previously led infrastructure at a major bank" },
-  { name: "Emily Watson", role: "Head of Product", bio: "Passionate about making complex tools simple and accessible" },
-  { name: "David Kim", role: "Head of Customer Success", bio: "Dedicated to helping families protect what matters most" },
-];
-
 const values = [
   { icon: Shield, title: "Security First", description: "Your data protection is our top priority. We use bank-level encryption." },
   { icon: Heart, title: "Compassion", description: "We understand the emotional weight of family preparedness and treat it with care." },
@@ -63,22 +56,6 @@ const About = () => {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper background="default" animation="gradient-sweep">
-        <div className="container-wide">
-          <SectionHeader badge="Leadership" title="Meet the team" />
-          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member) => (
-              <div key={member.name} className="text-center p-6 rounded-[20px] bg-card border border-border">
-                <div className="h-24 w-24 mx-auto rounded-full bg-primary/10 flex items-center justify-center text-2xl font-bold text-primary">{member.name.charAt(0)}</div>
-                <h3 className="mt-4 font-semibold text-foreground">{member.name}</h3>
-                <p className="text-sm text-primary font-medium">{member.role}</p>
-                <p className="mt-2 text-sm text-muted-foreground">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </SectionWrapper>
-
       <SectionWrapper background="muted" animation="diagonal-lines">
         <div className="container-wide max-w-3xl">
           <SectionHeader badge="Our Journey" title="Company timeline" />
@@ -92,17 +69,6 @@ const About = () => {
           </div>
         </div>
       </SectionWrapper>
-
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 hero-gradient" />
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-gradient-shift" />
-        </div>
-        <div id="careers" className="container-wide relative z-10 text-center text-white">
-          <h2 className="text-3xl font-bold">Join Our Team</h2>
-          <p className="mt-4 text-white/80 max-w-xl mx-auto leading-relaxed">We're always looking for talented people who share our mission. Check back soon for open positions.</p>
-        </div>
-      </section>
     </Layout>
   );
 };

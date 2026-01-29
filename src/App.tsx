@@ -8,7 +8,6 @@ import HowItWorks from "./pages/HowItWorks";
 import Pricing from "./pages/Pricing";
 import About from "./pages/About";
 import Security from "./pages/Security";
-import Resources from "./pages/Resources";
 import Partners from "./pages/Partners";
 import NotFound from "./pages/NotFound";
 
@@ -26,7 +25,6 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/security" element={<Security />} />
-          <Route path="/resources" element={<Resources />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
