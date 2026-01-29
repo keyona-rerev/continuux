@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Shield, ArrowRight, ExternalLink } from "lucide-react";
 
 const PrismmRedirect = () => {
-  const [countdown, setCountdown] = useState(3);
+  const [countdown, setCountdown] = useState(10);
   const [redirecting, setRedirecting] = useState(false);
 
   useEffect(() => {
