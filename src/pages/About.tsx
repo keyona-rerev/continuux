@@ -1,5 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
-import { PageHero } from "@/components/ui/page-hero";
+import { DarkHeroSection } from "@/components/ui/dark-hero-section";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Shield, Heart, Lock, Users, Eye, Sparkles } from "lucide-react";
@@ -22,23 +22,25 @@ const timeline = [
 const About = () => {
   return (
     <Layout>
-      <PageHero 
-        title="About Continuux"
-        subtitle="On a mission to help every family stay protected and connected"
+      <DarkHeroSection
+        badge={{
+          icon: Heart,
+          text: "Our Mission"
+        }}
+        headline={{
+          line1: "Built to",
+          line3: "Families Like Yours"
+        }}
+        highlightedText="Protect"
+        subtitle="We believe every family deserves the peace of mind that comes from being prepared. Continuux was created to give families facing uncertainty the one thing they need most: control."
+        gridType="stats"
+        gridItems={[
+          { number: "10,000+", label: "Families Protected" },
+          { number: "50,000+", label: "Documents Secured" },
+          { number: "24/7", label: "Always Accessible" }
+        ]}
+        gridColumns={3}
       />
-
-      <SectionWrapper background="default" animation="radial-glow">
-        <div className="container-wide">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-foreground">Our Mission</h2>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              We believe that protecting your family shouldn't require expensive lawyers or complicated software. 
-              Continuux was born from a simple idea: every family deserves a secure, organized place for their 
-              most important documents—instantly accessible when it matters most.
-            </p>
-          </div>
-        </div>
-      </SectionWrapper>
 
       <SectionWrapper background="muted" animation="dot-pulse">
         <div className="container-wide">
@@ -55,7 +57,7 @@ const About = () => {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper background="muted" animation="diagonal-lines">
+      <SectionWrapper background="default" animation="diagonal-lines">
         <div className="container-wide max-w-3xl">
           <SectionHeader badge="Our Journey" title="Company timeline" />
           <div className="mt-12 space-y-6">

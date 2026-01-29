@@ -1,40 +1,58 @@
 import { Layout } from "@/components/layout/Layout";
-import { PageHero } from "@/components/ui/page-hero";
+import { DarkHeroSection } from "@/components/ui/dark-hero-section";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeader } from "@/components/ui/section-header";
-import { Shield, Lock, Server, Eye, FileCheck, CheckCircle } from "lucide-react";
-
-const securityFeatures = [
-  { icon: Lock, title: "256-bit AES Encryption", description: "Your documents are encrypted using the same standard used by banks and government agencies." },
-  { icon: Server, title: "Secure Data Centers", description: "Data stored in SOC 2 certified facilities with 24/7 monitoring and redundant backups." },
-  { icon: Shield, title: "SOC 2 Type II Certified", description: "Our security practices are independently audited and verified annually." },
-  { icon: Eye, title: "Zero-Knowledge Architecture", description: "We never have access to your unencrypted data. Only you control your encryption keys." },
-  { icon: FileCheck, title: "GDPR Compliant", description: "Full compliance with global data protection regulations including GDPR and CCPA." },
-  { icon: CheckCircle, title: "Regular Penetration Testing", description: "Third-party security experts regularly test our systems for vulnerabilities." },
-];
+import { Shield, Lock, Server, Eye, FileCheck, CheckCircle, RefreshCw, Zap } from "lucide-react";
 
 const Security = () => {
   return (
     <Layout>
-      <PageHero 
-        title="Security & Trust"
-        subtitle="Your security is our foundation. Here's how we protect your family's most sensitive information."
+      <DarkHeroSection
+        badge={{
+          icon: Shield,
+          text: "Bank-Level Protection"
+        }}
+        headline={{
+          line1: "Your Family's Documents",
+          line3: "Security"
+        }}
+        highlightedText="Deserve Bank-Level"
+        subtitle="We protect your most sensitive information with the same encryption technology trusted by financial institutions worldwide. Your data is yours, always."
+        gridType="features"
+        gridItems={[
+          {
+            icon: Lock,
+            title: "256-Bit Encryption",
+            description: "Military-grade encryption protects every document you upload, in transit and at rest"
+          },
+          {
+            icon: Shield,
+            title: "Zero-Knowledge Architecture",
+            description: "We can't access your documents—only you and people you authorize can view them"
+          },
+          {
+            icon: Eye,
+            title: "Multi-Factor Authentication",
+            description: "Additional verification layers ensure only you can access your account"
+          },
+          {
+            icon: RefreshCw,
+            title: "Automatic Backups",
+            description: "Your documents are backed up continuously across secure servers worldwide"
+          },
+          {
+            icon: FileCheck,
+            title: "Audit Logs",
+            description: "Track every access to your documents—know exactly who viewed what and when"
+          },
+          {
+            icon: Zap,
+            title: "99.9% Uptime",
+            description: "Your documents are always accessible when you need them, from any device"
+          }
+        ]}
+        gridColumns={3}
       />
-
-      <SectionWrapper background="default" animation="gradient-sweep">
-        <div className="container-wide">
-          <SectionHeader badge="Protection" title="How we keep your data safe" />
-          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {securityFeatures.map((f) => (
-              <div key={f.title} className="p-6 rounded-[20px] bg-card border border-border shadow-soft">
-                <f.icon className="h-10 w-10 text-secondary mb-4" />
-                <h3 className="font-semibold text-foreground">{f.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{f.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </SectionWrapper>
 
       <SectionWrapper background="muted" animation="radial-glow">
         <div className="container-wide max-w-3xl">
@@ -51,6 +69,29 @@ const Security = () => {
             <div className="p-6 rounded-[20px] bg-card border border-border">
               <h3 className="font-semibold text-foreground">Right to deletion</h3>
               <p className="mt-2 text-muted-foreground">Request complete deletion of your account and all associated data at any time.</p>
+            </div>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper background="default" animation="dot-pulse">
+        <div className="container-wide">
+          <SectionHeader badge="Certifications" title="Industry-leading compliance" />
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="p-6 rounded-[20px] bg-card border border-border shadow-soft">
+              <Server className="h-10 w-10 text-secondary mb-4" />
+              <h3 className="font-semibold text-foreground">SOC 2 Type II Certified</h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">Our security practices are independently audited and verified annually.</p>
+            </div>
+            <div className="p-6 rounded-[20px] bg-card border border-border shadow-soft">
+              <FileCheck className="h-10 w-10 text-secondary mb-4" />
+              <h3 className="font-semibold text-foreground">GDPR Compliant</h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">Full compliance with global data protection regulations including GDPR and CCPA.</p>
+            </div>
+            <div className="p-6 rounded-[20px] bg-card border border-border shadow-soft">
+              <CheckCircle className="h-10 w-10 text-secondary mb-4" />
+              <h3 className="font-semibold text-foreground">Regular Penetration Testing</h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">Third-party security experts regularly test our systems for vulnerabilities.</p>
             </div>
           </div>
         </div>

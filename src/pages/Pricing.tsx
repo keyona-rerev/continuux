@@ -1,11 +1,11 @@
 import { Layout } from "@/components/layout/Layout";
-import { PageHero } from "@/components/ui/page-hero";
+import { DarkHeroSection } from "@/components/ui/dark-hero-section";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Link } from "react-router-dom";
-import { Check, ArrowRight, Gift, HelpCircle } from "lucide-react";
+import { Check, ArrowRight, Gift, HelpCircle, CreditCard, Shield, ArrowUpDown, CheckCircle } from "lucide-react";
 import { useState } from "react";
 
 const features = [
@@ -25,12 +25,39 @@ const Pricing = () => {
 
   return (
     <Layout>
-      <PageHero 
-        title="Simple, Transparent Pricing"
-        subtitle="One plan with everything your family needs. No hidden fees, no surprises."
+      <DarkHeroSection
+        badge={{
+          icon: CheckCircle,
+          text: "Free Forever for Early Users"
+        }}
+        headline={{
+          line1: "",
+          line3: "That Fits Your Family's Needs"
+        }}
+        highlightedText="Protection"
+        subtitle="Start with everything your family needs to stay connected and protected. Upgrade anytime as your needs grow—no pressure, no tricks."
+        gridType="features"
+        gridItems={[
+          {
+            icon: CreditCard,
+            title: "No Credit Card Required",
+            description: "Start protecting your family today without entering payment information"
+          },
+          {
+            icon: Shield,
+            title: "Bank-Level Security Included",
+            description: "Every plan includes 256-bit encryption and the same security banks use"
+          },
+          {
+            icon: ArrowUpDown,
+            title: "Upgrade Anytime",
+            description: "Need more storage or features? Switch plans with one click whenever you're ready"
+          }
+        ]}
+        gridColumns={3}
       />
 
-      <SectionWrapper background="default" animation="gradient-sweep" className="-mt-16">
+      <SectionWrapper background="default" animation="gradient-sweep">
         <div className="container-wide">
           <div className="max-w-2xl mx-auto">
             <div className="relative rounded-[20px] bg-card border-2 border-primary shadow-elevated p-8 lg:p-10">
