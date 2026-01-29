@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeader } from "@/components/ui/section-header";
+import { CTASection } from "@/components/home/CTASection";
 import { Shield, Heart, Lock, Users, Eye, Sparkles } from "lucide-react";
 
 const values = [
@@ -106,6 +107,8 @@ const About = () => {
           </div>
         </div>
       </SectionWrapper>
+      {/* CTA Section */}
+      <CTASection />
     </Layout>
   );
 };
